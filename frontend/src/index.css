@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap");
+@import "tailwindcss";
+/* prettier-ignore */
+@theme {
+  --color-lightBlue: #086efd;
+  --color-darkBlue: #316ebd;
+  --color-lightGreen: #49e3a7;
+  --font-sans: "Poppins", "sans-serif";
+  --spacing-180: "32rem";
+}
