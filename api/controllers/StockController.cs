@@ -9,6 +9,7 @@ using api.Dtos.Stock;
 using Microsoft.EntityFrameworkCore;
 using api.Interfaces;
 using api.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace api.Controllers
 {
@@ -42,6 +43,7 @@ namespace api.Controllers
             return stock == null ? NotFound() : Ok(stock.ToStockDto());
         }
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateStock([FromBody] CreateStockRequestDto stockDto)
         {
             if (!ModelState.IsValid)
